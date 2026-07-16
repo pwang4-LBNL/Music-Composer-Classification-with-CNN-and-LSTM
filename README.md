@@ -89,7 +89,7 @@ Performance Comparison
 ## Repository Structure
 
 ```
-music-composer-classification/
+Music-Composer-Classification-with-CNN-and-LSTM/
 │
 ├── data/
 │   ├── raw/
@@ -190,8 +190,8 @@ The following metrics are used to evaluate model performance:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/music-composer-classification.git
-cd music-composer-classification
+git clone https://github.com/your_username/Music-Composer-Classification-with-CNN-and-LSTM.git
+cd Music-Composer-Classification-with-CNN-and-LSTM
 ```
 
 Install dependencies:
