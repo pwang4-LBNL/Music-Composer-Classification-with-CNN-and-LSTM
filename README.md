@@ -1,8 +1,6 @@
 # Music-Composer-Classification-with-CNN-and-LSTM
 A deep learning project comparing CNN and LSTM models for classifying MIDI files from Bach, Beethoven, Chopin, and Mozart.
 
-# Music Composer Classification Using CNN and LSTM
-
 ## Overview
 
 This project develops and compares **Convolutional Neural Networks (CNN)** and **Long Short-Term Memory (LSTM)** models for classifying classical music composers using **MIDI** files.
