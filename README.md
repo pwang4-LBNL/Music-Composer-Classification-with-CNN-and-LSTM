@@ -1,6 +1,8 @@
 # Music-Composer-Classification-with-CNN-and-LSTM
 This project develops and compares **Convolutional Neural Networks (CNN)** and **Long Short-Term Memory (LSTM)** models for automatic classical music composer classification using MIDI files. The study focuses on four composers: Bach, Beethoven, Chopin, and Mozart.
 
+Music composer classification is a challenging sequence learning task. This project investigates how CNN and LSTM architectures capture musical patterns and temporal dependencies from MIDI representations.
+
 ## Table of Contents
 
 - Overview
@@ -19,7 +21,7 @@ This project develops and compares **Convolutional Neural Networks (CNN)** and *
 
 ## Overview
 
-This project develops and compares **Convolutional Neural Networks (CNN)** and **Long Short-Term Memory (LSTM)** models for classifying classical music composers using **MIDI** files.
+This project develops and compares **Convolutional Neural Networks (CNN)** and **Long Short-Term Memory (LSTM)** models for classifying classical music composers using **MIDI** files. 
 
 The classification task focuses on four composers:
 
@@ -67,10 +69,10 @@ Data Cleaning
       │
       ▼
 Exploratory Data Analysis (EDA)
-      │
+      │ (MIDI Parsing)
       ▼
 Feature Extraction
-      │
+      │ (Padding / Sequence Processing)
       ├──────────────┐
       ▼              ▼
  CNN Model      LSTM Model
@@ -135,11 +137,26 @@ The EDA includes:
 
 ### CNN
 
-The CNN model learns local musical patterns from MIDI representations such as piano rolls or feature matrices.
+The CNN model extracts local musical patterns from piano-roll or feature matrix representations using convolutional layers. It is designed to capture local pitch and rhythmic structures.
 
 ### LSTM
 
-The LSTM model learns temporal dependencies from sequential note events in MIDI files.
+The LSTM model learns temporal dependencies from sequential note events in MIDI files. It processes sequential note events and learns long-term temporal dependencies in musical compositions through recurrent memory cells. 
+
+---
+
+## Data Representation
+
+The MIDI files are parsed into machine-learning representations suitable for deep learning models.
+
+Examples include:
+
+- Piano roll representation
+- Note event sequences
+- Pitch
+- Duration
+- Velocity
+- Tempo
 
 ---
 
@@ -183,36 +200,6 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-## Running the Project
-
-Run data preprocessing:
-
-```bash
-python src/preprocessing.py
-```
-
-Train the CNN model:
-
-```bash
-python src/train.py --model cnn
-```
-
-Train the LSTM model:
-
-```bash
-python src/train.py --model lstm
-```
-
-Evaluate the model:
-
-```bash
-python src/evaluate.py
-```
-
----
-
 ## Results
 
 The final report compares CNN and LSTM performance for composer classification and discusses the strengths and limitations of each architecture.
@@ -221,9 +208,10 @@ The final report compares CNN and LSTM performance for composer classification a
 
 ## Contributors
 
+- Akua Duffour
+- April Bradick
 - Peng Wang
-- April
-- Akua
+
 
 University of San Diego
 
@@ -231,6 +219,9 @@ Applied Artificial Intelligence
 
 ---
 
-## License
+## References
 
-This project is for educational purposes only.
+- pretty_midi
+- music21
+- PyTorch Documentation
+- Deep Learning (Goodfellow et al.)
